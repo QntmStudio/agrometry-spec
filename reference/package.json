@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "test": "node --test test/ ../decoders/test/"
+    "test": "node --test \"test/*.test.js\" \"../decoders/test/*.test.js\""
   },
   "devDependencies": {
     "ajv": "^8.17.1"
