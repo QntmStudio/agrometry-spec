@@ -4,5 +4,10 @@
   "private": true,
   "license": "Apache-2.0",
   "type": "module",
-  "scripts": { "test": "node --test test/" }
+  "scripts": {
+    "test": "node --test test/ ../decoders/test/"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
 }
