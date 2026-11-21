@@ -25,7 +25,8 @@ gap by **reusing** SenML, IPSO IDs, SOSA and PROV-O rather than reinventing them
 | Calibration attestation | COSE_Sign1 record: sensor ID, reference (panel / cosine diffuser), geometry, validity window, coefficient version |
 | Batch receipt | Signed daily Merkle root, RFC 3161 timestamp, per-measurement inclusion proof |
 | Test vectors | Valid and invalid payloads with the expected decoded record |
-| Decoders | Payload formatters for TTN Device Repository and ChirpStack |
+| Decoders | Payload formatter for TTN and ChirpStack (field decoding; MAC verified in the backend) |
+| Mapping | Correspondence to SenML, SOSA and PROV-O |
 
 Out of scope for v0: full SOSA ontology, SensorML 3.0, NGSI-LD, per-measurement
 asymmetric signatures, public calibration registry, conformance programme.
@@ -34,7 +35,8 @@ asymmetric signatures, public calibration registry, conformance programme.
 
 ```
 spec/v0/        specification text (record, binary frame, calibration, batch receipt)
-reference/      reference encoder/decoder + AES-CMAC (Node, no dependencies): cd reference && npm test
+reference/      reference encoder/decoder + AES-CMAC (Node): cd reference && npm ci && npm test
+decoders/       TTN / ChirpStack payload formatter (ES5)
 schema/v0/      JSON Schemas (versioned $id)
 test-vectors/   valid / invalid examples
 LICENSES/       full license texts
@@ -45,8 +47,9 @@ LICENSES/       full license texts
 See [LICENSE.md](LICENSE.md). Spec text: CC BY 4.0. Schemas and code: Apache-2.0.
 Contributions are accepted under the [DCO](CONTRIBUTING.md); there is no CLA.
 
-All content is original work of the maintainers and has no third-party code
-dependencies (the reference implementation uses only Node built-ins). Standards
+All content is original work of the maintainers. The reference implementation and the
+decoders have no runtime dependencies (Node built-ins only); `ajv` (MIT) is a
+dev dependency used by the tests. Standards
 (SenML, COSE, RFC 3161/9162, SOSA, PROV-O) are referenced, not copied.
 
 ## Governance
