@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/harvest-open-data-spec/schema/v0/observation.schema.json",
+  "$id": "https://example.invalid/agrometry-spec/schema/v0/observation.schema.json",
   "title": "Observation record (v0 draft)",
   "type": "object",
   "required": ["schemaVersion", "bt", "e"],

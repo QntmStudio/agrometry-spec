@@ -1,4 +1,4 @@
-# harvest-open-data-spec
+# agrometry-spec
 
 An open specification for in-field agricultural measurements: how a low-cost
 sensor node (e.g. a spectral/NDVI node on LoRaWAN) describes **what it measured,
