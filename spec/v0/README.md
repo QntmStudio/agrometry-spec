@@ -5,7 +5,7 @@
 3. [Calibration attestation](03-calibration-attestation.md)
 4. [Batch receipt](04-batch-receipt.md)
 
-Still to write: mapping to SenML / SOSA / PROV-O.
+5. [Mapping to existing standards](05-mapping.md)
 
 Open design questions (unvalidated, to be settled by a pilot):
 
