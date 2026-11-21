@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/harvest-open-data-spec/schema/v0/observation.schema.json",
+  "title": "Observation record (v0 draft)",
+  "type": "object",
+  "required": ["schemaVersion", "bt", "e"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "0.0.0" },
+    "bn": { "type": "string", "description": "SenML base name: sensor identifier" },
+    "bt": { "type": "number", "description": "SenML base time, seconds since epoch" },
+    "counter": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+    "resetReason": { "enum": ["unknown", "power-on", "watchdog", "brown-out", "software", "pin"] },
+    "tagVerified": { "type": "boolean", "description": "Whether the application-layer MAC was verified" },
+    "calibrationId": { "type": "string" },
+    "firmwareId": { "type": "string" },
+    "e": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["n", "v", "u"],
+        "additionalProperties": false,
+        "properties": {
+          "n": { "type": "string", "description": "Measurement name, e.g. band/channel" },
+          "v": { "type": "number" },
+          "u": { "type": "string" },
+          "channel": { "enum": ["up", "down"] },
+          "integrationMs": { "type": "number", "exclusiveMinimum": 0 },
+          "gain": { "type": "number", "exclusiveMinimum": 0 },
+          "quality": {
+            "type": "array",
+            "items": { "enum": ["saturated", "low-light", "dirty-window"] },
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  }
+}

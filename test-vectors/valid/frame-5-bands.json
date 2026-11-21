@@ -1,0 +1,182 @@
+{
+  "description": "Valid 5-band frame. Key 2b7e151628aed2a6abf7158809cf4f3c (RFC 4493 test key, never use in production), DevEUI 0102030405060708.",
+  "frameHex": "010000002a0203e8020501044c01c20204b001f4030514022604057802580505dc028aa08c2c0100010007fafd285656a471d9",
+  "receivedAt": 1790000000,
+  "wire": {
+    "version": 0,
+    "counter": 42,
+    "gainCode": 2,
+    "integration": 1000,
+    "quality": 2,
+    "bands": [
+      {
+        "id": 1,
+        "up": 1100,
+        "down": 450
+      },
+      {
+        "id": 2,
+        "up": 1200,
+        "down": 500
+      },
+      {
+        "id": 3,
+        "up": 1300,
+        "down": 550
+      },
+      {
+        "id": 4,
+        "up": 1400,
+        "down": 600
+      },
+      {
+        "id": 5,
+        "up": 1500,
+        "down": 650
+      }
+    ],
+    "vbat": 160,
+    "vpanel": 140,
+    "temp": 44,
+    "reset": 1,
+    "fwId": 1,
+    "calId": 7
+  },
+  "record": {
+    "schemaVersion": "0.0.0",
+    "bn": "urn:dev:eui:0102030405060708",
+    "bt": 1790000000,
+    "counter": 42,
+    "calibrationId": "7",
+    "firmwareId": "1",
+    "resetReason": "power-on",
+    "tagVerified": true,
+    "e": [
+      {
+        "n": "band-1",
+        "v": 1100,
+        "u": "count",
+        "channel": "up",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-1",
+        "v": 450,
+        "u": "count",
+        "channel": "down",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-2",
+        "v": 1200,
+        "u": "count",
+        "channel": "up",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-2",
+        "v": 500,
+        "u": "count",
+        "channel": "down",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-3",
+        "v": 1300,
+        "u": "count",
+        "channel": "up",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-3",
+        "v": 550,
+        "u": "count",
+        "channel": "down",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-4",
+        "v": 1400,
+        "u": "count",
+        "channel": "up",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-4",
+        "v": 600,
+        "u": "count",
+        "channel": "down",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-5",
+        "v": 1500,
+        "u": "count",
+        "channel": "up",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "band-5",
+        "v": 650,
+        "u": "count",
+        "channel": "down",
+        "integrationMs": 100,
+        "gain": 4,
+        "quality": [
+          "low-light"
+        ]
+      },
+      {
+        "n": "vbat",
+        "v": 3.6,
+        "u": "V"
+      },
+      {
+        "n": "vpanel",
+        "v": 3.4,
+        "u": "V"
+      },
+      {
+        "n": "temp",
+        "v": 22,
+        "u": "Cel"
+      }
+    ]
+  }
+}

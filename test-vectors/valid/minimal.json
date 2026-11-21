@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "0.0.0",
+  "bn": "node-0001",
+  "bt": 1790000000,
+  "calibrationId": "cal-2026-01",
+  "firmwareId": "fw-0.1.0",
+  "e": [
+    { "n": "band-nir", "v": 1234, "u": "count", "channel": "up", "integrationMs": 100, "gain": 4 },
+    { "n": "band-nir", "v": 987, "u": "count", "channel": "down", "integrationMs": 100, "gain": 4, "quality": ["low-light"] }
+  ]
+}
