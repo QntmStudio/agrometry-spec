@@ -5,8 +5,9 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "test": "node --import tsx --test test/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "test": "node --import tsx --test test/*.test.ts ../decoders/test/*.test.ts",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p ../decoders/tsconfig.json",
+    "build:decoder": "tsc -p ../decoders/tsconfig.json"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
