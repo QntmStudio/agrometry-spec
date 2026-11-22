@@ -1,5 +1,7 @@
 # Licensing
 
+Copyright 2026 Quantum Studio. See [NOTICE](NOTICE).
+
 | Content | License | Text |
 |---|---|---|
 | Specification text (`spec/`, docs) | CC BY 4.0 | [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt) |

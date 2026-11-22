@@ -8,7 +8,9 @@ We use the [DCO](https://developercertificate.org/) instead of a CLA. Sign off e
 git commit -s
 ```
 
-which appends `Signed-off-by: Your Name <you@example.com>`.
+which appends `Signed-off-by: Your Name <you@example.com>`. The address in your
+commits is public: use your GitHub `noreply` address if you do not want to expose
+a personal one (`git config user.email ID+USERNAME@users.noreply.github.com`).
 
 ## Guidelines
 

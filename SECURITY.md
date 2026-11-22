@@ -8,3 +8,6 @@ format) or in the reference code privately, using GitHub's
 The v0 specification is a draft: some limits are already documented in
 `spec/v0/02-binary-frame.md` (symmetric MAC, truncated tag, no key management).
 Do not use the draft or its test key in production.
+
+Only the latest draft on `main` is supported. Reports are acknowledged on a
+best-effort basis; there is no bug bounty.

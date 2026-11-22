@@ -49,6 +49,17 @@ network server. Limits, stated plainly:
 
 ## Payload size
 
-The frame has to fit the application payload limit at the data rate in use. The
-LoRaWAN regional limit at the lowest EU868 data rate should be checked against
-the Regional Parameters document before relying on 51 bytes.
+The frame has to fit the maximum application payload size (N) at the data rate in
+use. For EU868 the LoRaWAN Regional Parameters (RP002) give, for repeater-compatible
+operation: N = 51 bytes at DR0 to DR2, 115 bytes at DR3 and 222 bytes at DR4 to DR7
+(242 bytes from DR4 when repeater compatibility is not required).
+
+Consequences for this frame:
+
+- A 5-band frame is exactly 51 bytes, so it fits at DR0 to DR2 only with no margin.
+- N shrinks when the uplink also carries MAC commands in FOpts. A 51-byte frame can
+  then be refused by the network at DR0 to DR2.
+- A node that must work at DR0 to DR2 under adverse conditions should send fewer
+  bands per frame or use a higher data rate.
+
+Other regions have different limits and are not checked in v0.

@@ -5,9 +5,10 @@ sensor node (e.g. a spectral/NDVI node on LoRaWAN) describes **what it measured,
 how it was calibrated and where the data came from**, in a form that researchers,
 integrators and platforms can verify independently.
 
-> **Status: v0, draft, unpublished.** Everything may change (SemVer `0.y.z`).
-> No interoperability is promised yet; the design is to be validated against a
-> real LoRaWAN pilot before anything is frozen.
+> **Status: v0, draft, not yet validated on real hardware.** Everything may change
+> (SemVer `0.y.z`). No interoperability is promised; the design is to be validated
+> against a real LoRaWAN pilot before anything is frozen. The reference code and the
+> test key are for study and testing only, not for production.
 
 ## Why
 
