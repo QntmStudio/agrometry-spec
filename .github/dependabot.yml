@@ -8,3 +8,7 @@ updates:
     directory: /reference
     schedule:
       interval: monthly
+  - package-ecosystem: npm
+    directory: /site
+    schedule:
+      interval: monthly

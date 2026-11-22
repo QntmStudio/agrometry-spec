@@ -2,6 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "agrometry-site",
   "compatibility_date": "2026-11-01",
+  "routes": [{ "pattern": "agrometry.org", "custom_domain": true }],
   "assets": {
     "directory": "./dist"
   }
