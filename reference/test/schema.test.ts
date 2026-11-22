@@ -1,10 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import Ajv2020 from 'ajv/dist/2020.js';
+import { Ajv2020 } from 'ajv/dist/2020.js';
 
 const root = new URL('../../', import.meta.url);
-const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
+const read = (p: string): any => JSON.parse(readFileSync(new URL(p, root), 'utf8'));
 const validate = new Ajv2020({ strict: true }).compile(read('schema/v0/observation.schema.json'));
 
 test('valid vectors validate', () => {

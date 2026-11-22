@@ -1,6 +1,6 @@
 # Licensing
 
-Copyright 2026 Quantum Studio. See [NOTICE](NOTICE).
+Copyright 2026 Quantum Studio S.r.l.s. See [NOTICE](NOTICE).
 
 | Content | License | Text |
 |---|---|---|

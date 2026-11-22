@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agrometry: an open standard for in-field agricultural measurements</title>
+<meta name="description" content="Agrometry describes what a low-cost field sensor measured, how it was calibrated and where the data came from, in a form anyone can verify.">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 18px/1.6 system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1.25rem; }
+  h1 { font-size: 2rem; margin-bottom: .25rem; }
+  .tag { margin-top: 0; opacity: .75; }
+  .status { border-left: 4px solid #b45309; padding: .5rem 1rem; background: rgba(180,83,9,.08); }
+  code { font-size: .9em; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Agrometry</h1>
+  <p class="tag">An open standard for in-field agricultural measurements.</p>
+
+  <p class="status"><strong>Status: v0, draft.</strong> Not yet validated on real hardware.
+  Everything may change. Not for production use.</p>
+
+  <p>A low-cost sensor node in a field should be able to say <em>what it measured,
+  how it was calibrated and where the data came from</em>, in a form that researchers,
+  integrators and platforms can verify independently. Agrometry defines that record, a compact
+  LoRaWAN-sized binary frame, a calibration attestation and a signed batch receipt. It reuses
+  SenML, SOSA and PROV-O instead of reinventing them.</p>
+
+  <h2>Schemas</h2>
+  <ul>
+    <li><a href="/schema/v0/observation.schema.json"><code>/schema/v0/observation.schema.json</code></a></li>
+  </ul>
+
+  <h2>Source and specification</h2>
+  <p><a href="https://github.com/QntmStudio/agrometry-spec">github.com/QntmStudio/agrometry-spec</a></p>
+
+  <h2>Licensing</h2>
+  <p>Specification text: CC BY 4.0. Schemas and code: Apache-2.0.</p>
+
+  <footer>Maintained by Quantum Studio. The name and logo are not covered by any license granted here.</footer>
+</main>
+</body>
+</html>

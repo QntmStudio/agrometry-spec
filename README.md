@@ -36,8 +36,9 @@ asymmetric signatures, public calibration registry, conformance programme.
 
 ```
 spec/v0/        specification text (record, binary frame, calibration, batch receipt)
-reference/      reference encoder/decoder + AES-CMAC (Node): cd reference && npm ci && npm test
-decoders/       TTN / ChirpStack payload formatter (ES5)
+reference/      reference encoder/decoder + AES-CMAC (TypeScript, Node): cd reference && npm ci && npm test
+decoders/       TTN / ChirpStack payload formatter (TypeScript source, compiled ES5 output)
+site/           agrometry.org (Cloudflare Workers static assets); serves the schema $id URLs
 schema/v0/      JSON Schemas (versioned $id)
 test-vectors/   valid / invalid examples
 LICENSES/       full license texts

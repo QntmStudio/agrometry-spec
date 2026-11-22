@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ES5"],
+    "module": "None",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "removeComments": false,
+    "types": [],
+    "rootDir": "src",
+    "outDir": "."
+  },
+  "include": ["src"],
+  "exclude": []
+}
