@@ -1,10 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { aesCmac } from '../cmac.js';
-import { decodeFrame, encodeFrame } from '../frame.js';
+import { aesCmac } from '../src/cmac.js';
+import { decodeFrame, encodeFrame, type Observation, type WireFrame } from '../src/frame.js';
 
-const hex = (s) => Buffer.from(s.replace(/\s/g, ''), 'hex');
+const hex = (s: string): Buffer => Buffer.from(s.replace(/\s/g, ''), 'hex');
 const key = hex('2b7e151628aed2a6abf7158809cf4f3c');
 const devEui = hex('0102030405060708');
 
@@ -17,7 +17,9 @@ test('AES-CMAC matches RFC 4493 vectors', () => {
   );
 });
 
-const vector = JSON.parse(readFileSync(new URL('../../test-vectors/valid/frame-5-bands.json', import.meta.url)));
+const vector = JSON.parse(
+  readFileSync(new URL('../../test-vectors/valid/frame-5-bands.json', import.meta.url), 'utf8'),
+) as { frameHex: string; receivedAt: number; wire: WireFrame; record: Observation };
 
 test('decodes the published frame vector', () => {
   const rec = decodeFrame(hex(vector.frameHex), { key, devEui, receivedAt: vector.receivedAt });
@@ -31,7 +33,7 @@ test('encode round-trips to the published vector', () => {
 
 test('tampered frame is flagged, not accepted', () => {
   const f = hex(vector.frameHex);
-  f[12] ^= 0x01;
+  f[12] = f[12]! ^ 0x01;
   assert.equal(decodeFrame(f, { key, devEui, receivedAt: 0 }).tagVerified, false);
 });
 
