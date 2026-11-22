@@ -2,13 +2,16 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
+    target-branch: development
     schedule:
       interval: monthly
   - package-ecosystem: npm
     directory: /reference
+    target-branch: development
     schedule:
       interval: monthly
   - package-ecosystem: npm
     directory: /site
+    target-branch: development
     schedule:
       interval: monthly
