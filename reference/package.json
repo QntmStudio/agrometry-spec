@@ -5,9 +5,14 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "test": "node --test \"test/*.test.js\" \"../decoders/test/*.test.js\""
+    "test": "node --import tsx --test test/*.test.ts ../decoders/test/*.test.ts",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p ../decoders/tsconfig.json",
+    "build:decoder": "tsc -p ../decoders/tsconfig.json"
   },
   "devDependencies": {
-    "ajv": "^8.17.1"
+    "@types/node": "^22.10.0",
+    "ajv": "^8.17.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
   }
 }

@@ -22,6 +22,11 @@ jobs:
           cache: npm
           cache-dependency-path: reference/package-lock.json
       - run: npm ci
+      - run: npm run typecheck
+      - name: Decoder is up to date with its TypeScript source
+        run: |
+          npm run build:decoder
+          git diff --exit-code -- ../decoders/uplink.js
       - run: npm test
   dco:
     if: github.event_name == 'pull_request'
