@@ -54,6 +54,10 @@ decoders have no runtime dependencies (Node built-ins only); `ajv` (MIT) is a
 dev dependency used by the tests. Standards
 (SenML, COSE, RFC 3161/9162, SOSA, PROV-O) are referenced, not copied.
 
+## Talk to us
+
+Questions, ideas and feedback on the draft: [Discussions](https://github.com/QntmStudio/agrometry-spec/discussions). Concrete bugs and spec changes: [issues](https://github.com/QntmStudio/agrometry-spec/issues). Vulnerabilities: see [SECURITY.md](SECURITY.md).
+
 ## Governance
 
 See [GOVERNANCE.md](GOVERNANCE.md). The name and logo are not covered by any

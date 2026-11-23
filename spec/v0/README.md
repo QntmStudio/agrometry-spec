@@ -4,7 +4,6 @@
 2. [Compact binary frame](02-binary-frame.md)
 3. [Calibration attestation](03-calibration-attestation.md)
 4. [Batch receipt](04-batch-receipt.md)
-
 5. [Mapping to existing standards](05-mapping.md)
 
 Open design questions (unvalidated, to be settled by a pilot):

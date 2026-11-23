@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Question or idea
+    url: https://github.com/QntmStudio/agrometry-spec/discussions
+    about: Ask questions and share feedback on the draft in Discussions.
   - name: Security issue
     url: https://github.com/QntmStudio/agrometry-spec/security/advisories/new
     about: Report vulnerabilities privately, not in a public issue.
